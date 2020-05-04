@@ -1,8 +1,7 @@
-window.addEventListener("resize", function(event) {
-  var bricks = Array.prototype.slice.call(
-    document.querySelector(".masonry-brick")
-  );
-  bricks.forEach(function(brick) {
-    brick.classlist.add("transition");
-  });
+const containerElem = document.querySelector(".masonry");
+
+mixitup(containerElem, {
+  animation: {
+    animateResizeTargets: true
+  }
 });
